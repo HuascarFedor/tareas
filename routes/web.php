@@ -20,6 +20,12 @@ Route::get('/', function () {
 
 Route::get('factorial', function () {
     return view('vistaFactorial');
-});
+})->name('factorial');
 
 Route::post('obtenerFactorial', [CalculosController::class, 'calcularFactorial'])->name('obtenerFactorial');
+
+Route::get('palindromo', function () {
+    return view('vistaPalindromo');
+})->name('palindromo');
+
+Route::post('obtenerPalindromo', [CalculosController::class, 'calcularPalindromo'])->name('obtenerPalindromo');

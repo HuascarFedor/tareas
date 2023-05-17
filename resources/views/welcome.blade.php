@@ -10,8 +10,11 @@
 
 <body>
     <h1 class="text-3xl text-center bg-blue-500 font-bold underline">
-        Hello world!
+        Ejercicios de programación
     </h1>
+    <a href="{{ route('factorial') }}">Factorial</a>
+    |
+    <a href="{{ route('palindromo') }}">Palindromo</a>
 </body>
 
 </html>

@@ -17,4 +17,16 @@ class CalculosController extends Controller
             $prod *= $i;
         return view('vistaFactorial', compact('n', 'prod'));
     }
+
+    function calcularPalindromo(Request $request)
+    {
+        $request->validate([
+            'cad' => 'required',
+        ]);
+        $cad = $request->cad;
+        $lower = strtolower(str_replace(" ", "", $cad));
+        $inv = strrev($lower);
+        $resul = $lower == $inv ? "ES" : "NO es";
+        return view('vistaPalindromo', compact('cad', 'resul'));
+    }
 }
